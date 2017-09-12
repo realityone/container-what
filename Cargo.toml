@@ -1,6 +1,7 @@
 [package]
+authors = ["realityone <realityone@me.com>"]
 name = "container-what"
 version = "0.1.0"
-authors = ["realityone <realityone@me.com>"]
 
 [dependencies]
+lazy_static = "0.2.8"
