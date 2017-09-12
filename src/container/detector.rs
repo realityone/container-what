@@ -24,6 +24,6 @@ impl Detector for ContainerDetector {
     type D = ContainerEngine;
 
     fn detect() -> ContainerEngine {
-        ContainerEngine::Docker
+        ContainerEngine::Maybe(vec!["Docker".to_string(), "Rocket".to_string()])
     }
 }

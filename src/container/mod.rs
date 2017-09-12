@@ -15,7 +15,7 @@ pub enum ContainerEngine {
 impl fmt::Display for ContainerEngine {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            ContainerEngine::Maybe(ref engines) => { write!(f, "Maybe: {:?}", "maybe") }
+            ContainerEngine::Maybe(ref engines) => { write!(f, "Maybe({})", engines.join(", ")) }
             _ => { write!(f, "{:?}", self) }
         }
     }
