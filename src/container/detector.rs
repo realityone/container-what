@@ -24,6 +24,10 @@ impl Detector for ContainerDetector {
     type D = ContainerEngine;
 
     fn detect() -> ContainerEngine {
-        ContainerEngine::Maybe(vec!["Docker".to_string(), "Rocket".to_string()])
+        if Self::is_openvz() {
+            return ContainerEngine::OpenVZ;
+        }
+
+        return ContainerEngine::Unknown;
     }
 }
