@@ -5,7 +5,8 @@ mod common;
 mod container;
 
 use common::Detector;
+use container::detector::ContainerDetector;
 
 fn main() {
-    println!("Container Engine: {}", container::detector::ContainerDetector::detect());
+    println!("{}", ContainerDetector::detect());
 }
