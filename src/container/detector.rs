@@ -8,7 +8,7 @@ impl ContainerDetector {
         // from virt-what
         let vz_path = get_file_path("proc/vz");
         let bc_path = get_file_path("proc/bc");
-        if (vz_path.exists() && vz_path.is_dir()) && (!vz_path.exists()) {
+        if vz_path.is_dir() && !bc_path.exists() {
             return true;
         }
         false
