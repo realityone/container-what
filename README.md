@@ -28,7 +28,7 @@ use container_what::container::detector::ContainerDetector;
 
 fn main() {
     // Specify the detect root
-    let ref ctx = DetectorContext::new(Path::new("/root"));
+    let ref ctx = DetectorContext::new(Path::new("/"));
     assert_eq!(ContainerDetector::detect(ctx), ContainerEngine::Docker);
 }
 ```
