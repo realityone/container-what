@@ -11,7 +11,7 @@ Put this crate in your `Cargo.toml`.
 
 ```Toml
 [dependencies]
-container_what = "*"
+container-what = "*"
 ```
 
 ## Usage
