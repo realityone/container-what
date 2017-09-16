@@ -1,4 +1,3 @@
-use std::sync::Mutex;
 use std::path::{Path, PathBuf};
 
 pub struct DetectorContext<'a> {

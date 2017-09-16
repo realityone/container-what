@@ -55,6 +55,15 @@ impl ContainerDetector {
             }
         }
     }
+
+    fn is_docker(ctx: &DetectorContext) -> bool {
+        let docker_init = ctx.get_file_path(".dockerinit");
+        let docker_env = ctx.get_file_path(".dockerenv");
+        if docker_init.is_file() || docker_env.is_file() {
+            return true;
+        }
+        false
+    }
 }
 
 impl Detector for ContainerDetector {
@@ -66,6 +75,9 @@ impl Detector for ContainerDetector {
         }
         if Self::is_lxc(ctx) {
             return ContainerEngine::LXC;
+        }
+        if Self::is_docker(ctx) {
+            return ContainerEngine::Docker;
         }
 
         return ContainerEngine::Unknown;
