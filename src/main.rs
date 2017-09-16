@@ -1,12 +1,12 @@
-#[macro_use]
-extern crate lazy_static;
-
 mod common;
 mod container;
 
-use common::Detector;
+use std::path::Path;
+
+use common::{Detector, DetectorContext};
 use container::detector::ContainerDetector;
 
 fn main() {
-    println!("{}", ContainerDetector::detect());
+    let ref ctx = DetectorContext::new(Path::new("/root"));
+    println!("{}", ContainerDetector::detect(ctx));
 }
