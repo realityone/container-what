@@ -2,6 +2,13 @@
 authors = ["realityone <realityone@me.com>"]
 name = "container-what"
 version = "0.1.0"
+description = "Detect if we are running in a container."
+documentation = "https://github.com/realityone/container-what"
+homepage = "https://github.com/realityone/container-what"
+readme = "README.md"
+keywords = ["container"]
+categories = ["command-line-utilities"]
+license-file = "LICENSE"
 
 [dependencies]
 
