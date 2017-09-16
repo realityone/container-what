@@ -1,5 +1,5 @@
 use std::sync::Mutex;
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
 
 lazy_static! {
     static ref ROOT: Mutex<PathBuf> = Mutex::new(PathBuf::new());
