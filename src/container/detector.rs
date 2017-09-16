@@ -17,7 +17,14 @@ fn read_to_string(path: &Path) -> Result<String, io::Error> {
 
 impl ContainerDetector {
     fn is_openvz(ctx: &DetectorContext) -> bool {
-        // from virt-what
+        /*
+            Copy from virt-what
+            # Check for OpenVZ / Virtuozzo.
+            # Added by Evgeniy Sokolov.
+            # /proc/vz - always exists if OpenVZ kernel is running (inside and outside
+            # container)
+            # /proc/bc - exists on node, but not inside container.
+        */
         let vz_path = ctx.get_file_path("proc/vz");
         let bc_path = ctx.get_file_path("proc/bc");
         if vz_path.is_dir() && !bc_path.exists() {
@@ -27,6 +34,12 @@ impl ContainerDetector {
     }
 
     fn is_lxc(ctx: &DetectorContext) -> bool {
+        /*
+            Copy from virt-what
+            # Check for LXC containers
+            # http://www.freedesktop.org/wiki/Software/systemd/ContainerInterface
+            # Added by Marc Fournier
+        */
         let init_proc_env_path = ctx.get_file_path("proc/1/environ");
         match read_to_string(init_proc_env_path.as_path()) {
             Ok(content) => {

@@ -4,3 +4,8 @@ name = "container-what"
 version = "0.1.0"
 
 [dependencies]
+
+
+[lib]
+name = "container_what"
+file = "src/lib.rs"
