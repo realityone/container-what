@@ -8,6 +8,7 @@ pub enum ContainerEngine {
     Rocket,
     OpenVZ,
     LXC,
+    RKT,
     Unknown,
     Maybe(Vec<String>),
 }
@@ -15,8 +16,8 @@ pub enum ContainerEngine {
 impl fmt::Display for ContainerEngine {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            ContainerEngine::Maybe(ref engines) => { write!(f, "Maybe({})", engines.join(", ")) }
-            _ => { write!(f, "{:?}", self) }
+            ContainerEngine::Maybe(ref engines) => write!(f, "Maybe({})", engines.join(", ")),
+            _ => write!(f, "{:?}", self),
         }
     }
 }

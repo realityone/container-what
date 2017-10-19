@@ -1,0 +1,80 @@
+361 297 0:46 / / rw,relatime shared:152 master:138 - overlay overlay rw,lowerdir=/var/lib/rkt/cas/tree/deps-sha512-2c8396f839428fa9fd684d29d9c4b2ff9055679ec2576005082426a5db5beea2/rootfs,upperdir=/var/lib/rkt/pods/run/ddb170aa-7a68-4265-a992-364d47b0b961/overlay/deps-sha512-2c8396f839428fa9fd684d29d9c4b2ff9055679ec2576005082426a5db5beea2/upper,workdir=/var/lib/rkt/pods/run/ddb170aa-7a68-4265-a992-364d47b0b961/overlay/deps-sha512-2c8396f839428fa9fd684d29d9c4b2ff9055679ec2576005082426a5db5beea2/work
+362 361 0:47 / /opt/stage2/ubuntu/rootfs rw,relatime shared:153 master:139 - overlay overlay rw,lowerdir=/var/lib/rkt/cas/tree/deps-sha512-acfa11510f6e23282979008accdc69593cc77ecfa5769bb034f38008d76ecf7f/rootfs,upperdir=/var/lib/rkt/pods/run/ddb170aa-7a68-4265-a992-364d47b0b961/overlay/deps-sha512-acfa11510f6e23282979008accdc69593cc77ecfa5769bb034f38008d76ecf7f/upper/ubuntu,workdir=/var/lib/rkt/pods/run/ddb170aa-7a68-4265-a992-364d47b0b961/overlay/deps-sha512-acfa11510f6e23282979008accdc69593cc77ecfa5769bb034f38008d76ecf7f/work/ubuntu
+363 361 0:48 / /sys ro,nosuid,nodev,noexec,relatime shared:154 master:140 - sysfs sysfs rw
+364 363 0:49 / /sys/fs/cgroup ro,nosuid,nodev,noexec shared:155 master:141 - tmpfs tmpfs ro,mode=755
+365 364 0:32 / /sys/fs/cgroup/net_cls,net_prio ro,nosuid,nodev,noexec,relatime shared:156 master:142 - cgroup cgroup rw,net_cls,net_prio
+366 365 0:32 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/net_cls,net_prio/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:157 master:142 - cgroup cgroup rw,net_cls,net_prio
+367 364 0:35 / /sys/fs/cgroup/blkio ro,nosuid,nodev,noexec,relatime shared:158 master:143 - cgroup cgroup rw,blkio
+368 367 0:35 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/blkio/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:159 master:143 - cgroup cgroup rw,blkio
+369 364 0:30 / /sys/fs/cgroup/cpu,cpuacct ro,nosuid,nodev,noexec,relatime shared:160 master:144 - cgroup cgroup rw,cpu,cpuacct
+370 369 0:30 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/cpu,cpuacct/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:161 master:144 - cgroup cgroup rw,cpu,cpuacct
+371 364 0:33 / /sys/fs/cgroup/memory ro,nosuid,nodev,noexec,relatime shared:162 master:145 - cgroup cgroup rw,memory
+372 371 0:33 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/memory/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:163 master:145 - cgroup cgroup rw,memory
+373 364 0:26 / /sys/fs/cgroup/devices ro,nosuid,nodev,noexec,relatime shared:164 master:146 - cgroup cgroup rw,devices
+374 373 0:26 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/devices/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:165 master:146 - cgroup cgroup rw,devices
+375 364 0:28 / /sys/fs/cgroup/freezer ro,nosuid,nodev,noexec,relatime shared:166 master:147 - cgroup cgroup rw,freezer
+376 375 0:28 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/freezer/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:167 master:147 - cgroup cgroup rw,freezer
+377 364 0:31 / /sys/fs/cgroup/perf_event ro,nosuid,nodev,noexec,relatime shared:168 master:148 - cgroup cgroup rw,perf_event
+378 377 0:31 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/perf_event/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:169 master:148 - cgroup cgroup rw,perf_event
+379 364 0:27 / /sys/fs/cgroup/hugetlb ro,nosuid,nodev,noexec,relatime shared:170 master:149 - cgroup cgroup rw,hugetlb
+380 379 0:27 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/hugetlb/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:171 master:149 - cgroup cgroup rw,hugetlb
+381 364 0:29 / /sys/fs/cgroup/pids ro,nosuid,nodev,noexec,relatime shared:172 master:150 - cgroup cgroup rw,pids
+382 381 0:29 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/pids/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:173 master:150 - cgroup cgroup rw,pids
+383 364 0:34 / /sys/fs/cgroup/cpuset ro,nosuid,nodev,noexec,relatime shared:174 master:151 - cgroup cgroup rw,cpuset
+384 383 0:34 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice /sys/fs/cgroup/cpuset/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope/system.slice rw,nosuid,nodev,noexec,relatime shared:175 master:151 - cgroup cgroup rw,cpuset
+385 364 0:24 / /sys/fs/cgroup/systemd ro,nosuid,nodev,noexec,relatime shared:182 - cgroup cgroup rw,xattr,release_agent=/lib/systemd/systemd-cgroups-agent,name=systemd
+386 361 0:50 / /tmp rw shared:176 - tmpfs tmpfs rw
+387 361 0:51 / /dev rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+388 387 0:52 / /dev/shm rw,nosuid,nodev shared:178 - tmpfs tmpfs rw
+389 387 0:54 / /dev/pts rw,nosuid,noexec,relatime shared:180 - devpts devpts rw,gid=5,mode=620,ptmxmode=666
+390 387 0:14 /1 /dev/console rw,nosuid,noexec,relatime shared:181 master:100 - devpts devpts rw,gid=5,mode=620,ptmxmode=000
+391 361 0:53 / /run rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+392 391 0:19 /systemd/nspawn/propagate/rkt-ddb170aa-7a68-4265-a992-364d47b0b961 /run/systemd/nspawn/incoming ro,relatime master:104 - tmpfs tmpfs rw,size=99844k,mode=755
+199 361 0:56 / /proc rw,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+200 199 0:56 /sys /proc/sys ro,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+201 199 0:56 /sysrq-trigger /proc/sysrq-trigger ro,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+203 385 0:24 /user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope /sys/fs/cgroup/systemd/user.slice/user-1000.slice/session-2.scope/machine-rkt\134x2dddb170aa\134x2d7a68\134x2d4265\134x2da992\134x2d364d47b0b961.scope rw,nosuid,nodev,noexec,relatime shared:182 - cgroup cgroup rw,xattr,release_agent=/lib/systemd/systemd-cgroups-agent,name=systemd
+204 200 0:53 /proc-sys-kernel-random-boot-id//deleted /proc/sys/kernel/random/boot_id ro,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+205 199 0:53 /proc-sys-kernel-random-boot-id//deleted /proc/sys/kernel/random/boot_id rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+206 199 0:53 /kmsg//deleted /proc/kmsg rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+202 362 0:47 / /opt/stage2/ubuntu/rootfs rw,relatime shared:153 master:139 - overlay overlay rw,lowerdir=/var/lib/rkt/cas/tree/deps-sha512-acfa11510f6e23282979008accdc69593cc77ecfa5769bb034f38008d76ecf7f/rootfs,upperdir=/var/lib/rkt/pods/run/ddb170aa-7a68-4265-a992-364d47b0b961/overlay/deps-sha512-acfa11510f6e23282979008accdc69593cc77ecfa5769bb034f38008d76ecf7f/upper/ubuntu,workdir=/var/lib/rkt/pods/run/ddb170aa-7a68-4265-a992-364d47b0b961/overlay/deps-sha512-acfa11510f6e23282979008accdc69593cc77ecfa5769bb034f38008d76ecf7f/work/ubuntu
+207 202 0:51 /null /opt/stage2/ubuntu/rootfs/dev/null rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+208 362 0:51 /null /opt/stage2/ubuntu/rootfs/dev/null rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+209 202 0:51 /zero /opt/stage2/ubuntu/rootfs/dev/zero rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+210 362 0:51 /zero /opt/stage2/ubuntu/rootfs/dev/zero rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+211 202 0:51 /full /opt/stage2/ubuntu/rootfs/dev/full rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+212 362 0:51 /full /opt/stage2/ubuntu/rootfs/dev/full rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+213 202 0:51 /random /opt/stage2/ubuntu/rootfs/dev/random rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+214 362 0:51 /random /opt/stage2/ubuntu/rootfs/dev/random rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+215 202 0:51 /urandom /opt/stage2/ubuntu/rootfs/dev/urandom rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+216 362 0:51 /urandom /opt/stage2/ubuntu/rootfs/dev/urandom rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+217 202 0:51 /tty /opt/stage2/ubuntu/rootfs/dev/tty rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+218 362 0:51 /tty /opt/stage2/ubuntu/rootfs/dev/tty rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+219 202 0:51 /net/tun /opt/stage2/ubuntu/rootfs/dev/net/tun rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+220 362 0:51 /net/tun /opt/stage2/ubuntu/rootfs/dev/net/tun rw,nosuid shared:177 - tmpfs tmpfs rw,mode=755
+221 202 0:14 /1 /opt/stage2/ubuntu/rootfs/dev/console rw,nosuid,noexec,relatime shared:181 master:100 - devpts devpts rw,gid=5,mode=620,ptmxmode=000
+222 362 0:14 /1 /opt/stage2/ubuntu/rootfs/dev/console rw,nosuid,noexec,relatime shared:181 master:100 - devpts devpts rw,gid=5,mode=620,ptmxmode=000
+223 202 0:56 / /opt/stage2/ubuntu/rootfs/proc rw,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+224 223 0:56 /sys /opt/stage2/ubuntu/rootfs/proc/sys ro,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+225 224 0:53 /proc-sys-kernel-random-boot-id//deleted /opt/stage2/ubuntu/rootfs/proc/sys/kernel/random/boot_id ro,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+226 223 0:56 /sysrq-trigger /opt/stage2/ubuntu/rootfs/proc/sysrq-trigger ro,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+227 223 0:53 /proc-sys-kernel-random-boot-id//deleted /opt/stage2/ubuntu/rootfs/proc/sys/kernel/random/boot_id rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+228 223 0:53 /kmsg//deleted /opt/stage2/ubuntu/rootfs/proc/kmsg rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+229 362 0:56 / /opt/stage2/ubuntu/rootfs/proc rw,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+230 229 0:56 /sys /opt/stage2/ubuntu/rootfs/proc/sys ro,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+231 230 0:53 /proc-sys-kernel-random-boot-id//deleted /opt/stage2/ubuntu/rootfs/proc/sys/kernel/random/boot_id ro,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+232 229 0:56 /sysrq-trigger /opt/stage2/ubuntu/rootfs/proc/sysrq-trigger ro,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+233 229 0:53 /proc-sys-kernel-random-boot-id//deleted /opt/stage2/ubuntu/rootfs/proc/sys/kernel/random/boot_id rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+234 229 0:53 /kmsg//deleted /opt/stage2/ubuntu/rootfs/proc/kmsg rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+235 202 0:52 / /opt/stage2/ubuntu/rootfs/dev/shm rw,nosuid,nodev shared:178 - tmpfs tmpfs rw
+236 362 0:52 / /opt/stage2/ubuntu/rootfs/dev/shm rw,nosuid,nodev shared:178 - tmpfs tmpfs rw
+237 202 0:54 / /opt/stage2/ubuntu/rootfs/dev/pts rw,nosuid,noexec,relatime shared:180 - devpts devpts rw,gid=5,mode=620,ptmxmode=666
+238 362 0:54 / /opt/stage2/ubuntu/rootfs/dev/pts rw,nosuid,noexec,relatime shared:180 - devpts devpts rw,gid=5,mode=620,ptmxmode=666
+239 202 0:53 /systemd/journal /opt/stage2/ubuntu/rootfs/run/systemd/journal rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+240 362 0:53 /systemd/journal /opt/stage2/ubuntu/rootfs/run/systemd/journal rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+241 202 0:48 / /opt/stage2/ubuntu/rootfs/sys ro,nosuid,nodev,noexec,relatime shared:154 master:140 - sysfs sysfs rw
+242 362 0:48 / /opt/stage2/ubuntu/rootfs/sys ro,nosuid,nodev,noexec,relatime shared:154 master:140 - sysfs sysfs rw
+243 202 0:56 /sys/kernel/hostname /opt/stage2/ubuntu/rootfs/etc/hostname ro,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+244 362 0:56 /sys/kernel/hostname /opt/stage2/ubuntu/rootfs/etc/hostname ro,nosuid,nodev,noexec,relatime shared:183 - proc proc rw
+245 202 0:53 /systemd/notify /opt/stage2/ubuntu/rootfs/run/systemd/notify rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755
+246 362 0:53 /systemd/notify /opt/stage2/ubuntu/rootfs/run/systemd/notify rw,nosuid,nodev shared:179 - tmpfs tmpfs rw,mode=755

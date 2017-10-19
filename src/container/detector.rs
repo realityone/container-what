@@ -1,7 +1,7 @@
-use std::io;
 use std::fs::File;
-use std::path::Path;
+use std::io;
 use std::io::prelude::*;
+use std::path::Path;
 
 use super::ContainerEngine;
 use common::{Detector, DetectorContext};
@@ -17,14 +17,13 @@ fn read_to_string(path: &Path) -> Result<String, io::Error> {
 
 impl ContainerDetector {
     fn is_openvz(ctx: &DetectorContext) -> bool {
-        /*
-            Copy from virt-what
-            # Check for OpenVZ / Virtuozzo.
-            # Added by Evgeniy Sokolov.
-            # /proc/vz - always exists if OpenVZ kernel is running (inside and outside
-            # container)
-            # /proc/bc - exists on node, but not inside container.
-        */
+        // Copy from virt-what
+        // # Check for OpenVZ / Virtuozzo.
+        // # Added by Evgeniy Sokolov.
+        // # /proc/vz - always exists if OpenVZ kernel is running (inside and outside
+        // # container)
+        // # /proc/bc - exists on node, but not inside container.
+        //
         let vz_path = ctx.get_file_path("proc/vz");
         let bc_path = ctx.get_file_path("proc/bc");
         if vz_path.is_dir() && !bc_path.exists() {
@@ -34,12 +33,11 @@ impl ContainerDetector {
     }
 
     fn is_lxc(ctx: &DetectorContext) -> bool {
-        /*
-            Copy from virt-what
-            # Check for LXC containers
-            # http://www.freedesktop.org/wiki/Software/systemd/ContainerInterface
-            # Added by Marc Fournier
-        */
+        // Copy from virt-what
+        // # Check for LXC containers
+        // # http://www.freedesktop.org/wiki/Software/systemd/ContainerInterface
+        // # Added by Marc Fournier
+        //
         let init_proc_env_path = ctx.get_file_path("proc/1/environ");
         match read_to_string(init_proc_env_path.as_path()) {
             Ok(content) => {
@@ -64,6 +62,23 @@ impl ContainerDetector {
         }
         false
     }
+
+    fn is_rkt(ctx: &DetectorContext) -> bool {
+        let rkt_mount_info = ctx.get_file_path("proc/1/mountinfo");
+        match read_to_string(rkt_mount_info.as_path()) {
+            Ok(content) => {
+                for line in content.lines() {
+                    if line.find("/var/lib/rkt").is_some() {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            Err(_) => {
+                return false;
+            }
+        }
+    }
 }
 
 impl Detector for ContainerDetector {
@@ -78,6 +93,9 @@ impl Detector for ContainerDetector {
         }
         if Self::is_docker(ctx) {
             return ContainerEngine::Docker;
+        }
+        if Self::is_rkt(ctx) {
+            return ContainerEngine::RKT;
         }
 
         return ContainerEngine::Unknown;

@@ -1,14 +1,12 @@
 use std::path::{Path, PathBuf};
 
 pub struct DetectorContext<'a> {
-    root: &'a Path
+    root: &'a Path,
 }
 
 impl<'a> DetectorContext<'a> {
     pub fn new(path: &'a Path) -> Self {
-        DetectorContext {
-            root: path
-        }
+        DetectorContext { root: path }
     }
 
     pub fn get_file_path(&self, path_str: &str) -> PathBuf {
