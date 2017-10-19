@@ -1,0 +1,9 @@
+language: rust
+
+rust:
+  - stable
+  - nightly
+
+script: |
+  export TESTS_PATH=`pwd`/tests
+  cargo test
