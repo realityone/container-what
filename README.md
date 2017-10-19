@@ -1,4 +1,7 @@
 # container-what
+
+[![Build Status](https://travis-ci.org/realityone/container-what.svg?branch=master)](https://travis-ci.org/realityone/container-what)
+
 Detect if we are running in a container.
 
 Looks like [virt-what](https://people.redhat.com/~rjones/virt-what/), but aim to container engines.
